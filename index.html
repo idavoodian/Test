@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>April 19 Plan</title>
+    <style>
+        body {
+            background-image: url('https://cdn.discordapp.com/attachments/1061857065070514206/1095850832152514710/Iman_a_super_high_quality_image_of_a_Universe_in_colorful_way_w_9b8d7f63-d8f7-4bb3-815c-711c0c5ad3a2.png');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+    .container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+    }
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+ul li .tag {
+position: absolute;
+top: 50%;
+right: 0;
+transform: translateY(-50%);
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 12px;
+font-weight: bold;
+}
+
+ul li .emoji {
+    margin-right: 10px;
+}
+
+.morning {
+    background-color: #FFD700;
+}
+
+.afternoon {
+    background-color: #FFA07A;
+}
+
+.night {
+    background-color: #87CEFA;
+}
+
+ul li.done {
+    text-decoration: line-through;
+    background-color: #e0e0e0;
+}
+
+#done {
+    display: none;
+}
+@media only screen and (max-width: 414px) {
+body {
+padding: 10px;
+}
+.container {
+padding: 10px;
+border-radius: 5px;
+}
+ul li .tag {
+position: absolute;
+top: 50%;
+right: 5px;
+transform: translateY(-50%);
+}
+}
+</style>
+
+<script>
+    function toggleDone(e) {
+        e.classList.toggle('done');
+    }
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>April 19 Plan</h1>
+    <ul id="tasks">
+  <li onclick="toggleDone(this)"><span class="tag morning">6:00</span><span class="emoji">⏰</span>Wake up</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">6:10</span><span class="emoji">🚿</span>Take a shower</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">6:30</span><span class="emoji">👕</span>Get dressed and prepare to go out</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">7:00</span><span class="emoji">🌅</span>Watch the sunrise</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">7:30</span><span class="emoji">☕
+  </span>Morning Coffee</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">7:45</span><span class="emoji">🚶‍♂️</span>Travel to Boavista</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">8:00</span><span class="emoji">🏠</span>Prepare the house (don't forget the key)</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">9:00</span><span class="emoji">💼</span>Meeting with Bashir (Story Spark Development Plan)</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">10:00</span><span class="emoji">📅</span>Set a meeting with Golnaz</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">10:15</span><span class="emoji">📝</span>Finalize the first version of the script for Golnaz</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">10:30</span><span class="emoji">🔐</span>Create a midjourney account with a subscription for Golnaz</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">10:45</span><span class="emoji">💡</span>Discuss with Golnaz (social media, other ideas, contract)</li>
+  <li onclick="toggleDone(this)"><span class="tag morning">11:15</span><span class="emoji">📊</span>Set up the Persian Campaign Plan (Persian website and Google Ads)</li>
+  <li onclick="toggleDone(this)"><span class="tag afternoon">12:00</span><span class="emoji">🍽️</span>Lunch break</li>
+  <li onclick="toggleDone(this)"><span class="tag afternoon">1:00</span><span class="emoji">🔨</span>Continue preparing Boavista</li>
+  <li onclick="toggleDone(this)"><span class="tag afternoon">3:00</span><span class="emoji">🧺</span>Take the sheets to the laundry</li>
+  <li onclick="toggleDone(this)"><span class="tag afternoon">4:00</span><span class="emoji">💆‍♂️</span>Rest or complete any unfinished tasks</li>
+  <li onclick="toggleDone(this)"><span class="tag night">6:00</span><span class="emoji">🍴</span>Dinner</li>
+  <li onclick="toggleDone(this)"><span class="tag night">7:30</span><span class="emoji">📚</span>Children's book class for 45 minutes</li>
+  <li onclick="toggleDone(this)"><span class="tag night">8:15</span><span class="emoji">💤</span>Relax and wind down</li>
+  <li onclick="toggleDone(this)"><span class="tag night">9:00</span><span class="emoji">📺</span>Watch Ted Lasso</li>
+  <li onclick="toggleDone(this)"><span class="tag night">10:00</span><span class="emoji">🌙</span>Get ready for bed</li>
+  <li onclick="toggleDone(this)"><span class="tag night">10:30</span><span class="emoji">📝</span>Write tomorrow's plan and week plan before sleep</li>
+
+  <li onclick="toggleDone(this)"><span class="tag night">11:00</span><span class="emoji">😴</span>Bedtime</li>
+</ul>
+<h1 id="doneTitle" style="display:none;">Done</h1>
+<ul id="done">
+</ul>
+</div>
+<script>
+document.getElementById("tasks").addEventListener("click", function (e) {
+if (e.target && e.target.matches("li")) {
+const doneList = document.getElementById("done");
+const doneTitle = document.getElementById("doneTitle");
+toggleDone(e.target);
+if (e.target.classList.contains("done")) {
+doneList.appendChild(e.target);
+doneTitle.style.display = "block";
+} else {
+document.getElementById("tasks").appendChild(e.target);
+doneTitle.style.display = "none";
+}
+}
+});
+</script>
+</body>
+</html>
